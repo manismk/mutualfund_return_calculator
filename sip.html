@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sip.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <title>Modern stock Return Calculator</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <h1>SIP return Calculator</h1>
+      <div class="container">
+        <div class="col1">
+          <div class="priceContainer">
+            <label for="purchaseInput">Monthly Invesment</label>
+            <span id="purchase">500</span>
+          </div>
+          <input
+            class="slider"
+            type="range"
+            id="purchaseInput"
+            value="500"
+            min="500"
+            max="100000"
+            step="500"
+          />
+          <div class="priceContainer">
+            <label for="rateInput">Expected Return Rate</label>
+            <span id="rate">1</span>
+          </div>
+          <input
+            class="slider"
+            type="range"
+            id="rateInput"
+            value="1"
+            min="1"
+            max="15"
+            step="0.5"
+          />
+          <div class="priceContainer">
+            <label for="yearsInput">No of years</label>
+            <span id="years">1</span>
+          </div>
+          <input
+            class="slider"
+            type="range"
+            id="yearsInput"
+            value="1"
+            min="1"
+            max="30"
+            step="1"
+          />
+          <div class="priceContainer">
+            <label>Invested amount</label>
+            <span id="invested">1</span>
+          </div>
+          <div class="priceContainer">
+            <label>Expected Return </label>
+            <span id="expected">1</span>
+          </div>
+          <div class="priceContainer">
+            <label>Total Value </label>
+            <span id="total">1</span>
+          </div>
+        </div>
+        <div class="col2">
+          <canvas id="myChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <script src="sip.js"></script>
+  </body>
+</html>
