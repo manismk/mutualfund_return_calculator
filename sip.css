@@ -46,6 +46,7 @@ label {
   -webkit-transition: 0.2s;
   transition: opacity 0.2s;
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 input[type="range"]:focus {
   outline: none;
