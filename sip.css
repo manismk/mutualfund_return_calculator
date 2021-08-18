@@ -89,7 +89,7 @@ input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: 0px 0px 0px 0.15rem #ecfdf5, 0px 0px 0px 0.4rem #10b981;
+  box-shadow: 0px 0px 0px 0.15rem #ecfdf5, 0px 0px 0px 0.3rem #10b981;
 }
 
 input[type="range"]::-moz-range-thumb {
@@ -99,12 +99,12 @@ input[type="range"]::-moz-range-thumb {
   -webkit-appearance: none;
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: 0px 0px 0px 0.15rem #ecfdf5, 0px 0px 0px 0.4rem #047857;
+  box-shadow: 0px 0px 0px 0.15rem #ecfdf5, 0px 0px 0px 0.3rem #047857;
 }
 input[type="radio"]:after {
-  width: 0.7rem;
-  height: 0.7rem;
-  border-radius: 0.7rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 0.8rem;
   top: -2px;
   left: -1px;
   position: relative;
@@ -112,13 +112,13 @@ input[type="radio"]:after {
   content: "";
   display: inline-block;
   visibility: visible;
-  box-shadow: 0px 0px 0px 0.15rem #d1fae5, 0px 0px 0px 0.2rem #047857;
+  box-shadow: 0px 0px 0px 0.15rem #d1fae5, 0px 0px 0px 0.25rem #047857;
 }
 
 input[type="radio"]:checked:after {
-  width: 0.7rem;
-  height: 0.7rem;
-  border-radius: 0.7rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 0.8rem;
   top: -2px;
   left: -1px;
   position: relative;
@@ -127,7 +127,7 @@ input[type="radio"]:checked:after {
   display: inline-block;
   visibility: visible;
 
-  box-shadow: 0px 0px 0px 0.15rem #d1fae5, 0px 0px 0px 0.2rem #047857;
+  box-shadow: 0px 0px 0px 0.15rem #d1fae5, 0px 0px 0px 0.25rem #047857;
 }
 #purchase::before,
 #invested::before,
