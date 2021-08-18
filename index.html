@@ -6,22 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="sip.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-    <title>Modern stock Return Calculator</title>
+    <title>Mutual Fund Return Calculator</title>
   </head>
   <body>
     <div class="main-container">
-      <h1>SIP return Calculator</h1>
+      <h1>Mutual Fund return Calculator</h1>
+      <div class="investTypeContainer">
+        <form id="investType">
+          <div>
+            <input
+              type="radio"
+              name="invesmentType"
+              id="sip"
+              value="sip"
+              checked
+            />
+            <label for="sip">SIP invesment</label>
+          </div>
+
+          <div>
+            <input
+              type="radio"
+              name="invesmentType"
+              id="lumpsum"
+              value="lumpsum"
+            />
+            <label for="lumpsum">Lumpsum invesment</label>
+          </div>
+        </form>
+      </div>
       <div class="container">
         <div class="col1">
           <div class="priceContainer">
-            <label for="purchaseInput">Monthly Invesment</label>
+            <label for="purchaseInput" id="investLabel"
+              >Monthly Invesment</label
+            >
             <span id="purchase">500</span>
           </div>
           <input
             class="slider"
             type="range"
             id="purchaseInput"
-            value="500"
             min="500"
             max="100000"
             step="500"
@@ -36,7 +61,7 @@
             id="rateInput"
             value="1"
             min="1"
-            max="15"
+            max="25"
             step="0.5"
           />
           <div class="priceContainer">
