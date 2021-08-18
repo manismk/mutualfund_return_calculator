@@ -48,9 +48,9 @@ label {
   padding-right: 0.5rem;
 }
 .investTypeContainer label {
-  margin-top: -5px;
-  padding-left: 0.5rem;
-  margin-right: 1rem;
+  margin-top: -4px;
+  padding-left: 0.8rem;
+  margin-right: 1.2rem;
 }
 .investTypeContainer input[type="radio"],
 .investTypeContainer label {
@@ -102,9 +102,9 @@ input[type="range"]::-moz-range-thumb {
   box-shadow: 0px 0px 0px 0.15rem #ecfdf5, 0px 0px 0px 0.3rem #047857;
 }
 input[type="radio"]:after {
-  width: 0.8rem;
-  height: 0.8rem;
-  border-radius: 0.8rem;
+  width: 0.95rem;
+  height: 0.95rem;
+  border-radius: 0.95rem;
   top: -2px;
   left: -1px;
   position: relative;
@@ -116,9 +116,9 @@ input[type="radio"]:after {
 }
 
 input[type="radio"]:checked:after {
-  width: 0.8rem;
-  height: 0.8rem;
-  border-radius: 0.8rem;
+  width: 0.95rem;
+  height: 0.95rem;
+  border-radius: 0.95rem;
   top: -2px;
   left: -1px;
   position: relative;
