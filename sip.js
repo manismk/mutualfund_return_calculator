@@ -46,7 +46,10 @@ for (var i = 0, max = investType.length; i < max; i++) {
 }
 function updateslider(slider, spanName) {
   if (slider) {
-    spanName.innerText = numberConvertToIndian(slider.value);
+    spanName.innerText =
+      spanName.id === "purchase"
+        ? numberConvertToIndian(slider.value)
+        : slider.value;
     var value = ((slider.value - slider.min) / (slider.max - slider.min)) * 100;
     var color = `linear-gradient(to right, #047857 0%, #047857 ${value}%, #6EE7B7 ${value}%, #6EE7B7 100%)`;
     slider.style.background = color;
