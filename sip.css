@@ -5,14 +5,20 @@
   box-sizing: border-box;
 }
 
-:root {
+.green-theme {
   --primary-bg: #d1fae5;
-  --primary-col: #10b981;
+  --slider-dark: #047857;
+  --slider-light: #6ee7b7;
+}
+.red-theme {
+  --primary-bg: #fee2e2;
+  --slider-dark: #b91c1c;
+  --slider-light: #fca5a5;
 }
 
 .main-container {
   font-family: "Roboto", sans-serif;
-  color: #047857;
+  color: var(--slider-dark);
   max-width: 768px;
   margin: 8rem auto;
   text-align: center;
@@ -65,15 +71,15 @@ label {
 
   background: linear-gradient(
     to right,
-    #10b981 0%,
-    #10b981 1%,
-    grey 1%,
-    grey 100%
+    var(--slider-dark) 0%,
+    var(--slider-dark) 1%,
+    var(--slider-light) 1%,
+    var(--slider-light) 100%
   );
   border-radius: 5px;
 
   margin-bottom: 1rem;
-
+  border: 1px solid var(--slider-dark);
   cursor: pointer;
   -webkit-transition: 0.2s;
   transition: opacity 0.2s;
@@ -85,21 +91,23 @@ input[type="range"]:focus {
 input[type="range"]::-webkit-slider-thumb {
   height: 0.6rem;
   width: 0.6rem;
-  background: #10b981;
+  background: var(--slider-dark);
   -webkit-appearance: none;
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: 0px 0px 0px 0.15rem #ecfdf5, 0px 0px 0px 0.3rem #10b981;
+  box-shadow: 0px 0px 0px 0.15rem var(--primary-bg),
+    0px 0px 0px 0.3rem var(--slider-dark);
 }
 
 input[type="range"]::-moz-range-thumb {
   height: 0.6rem;
   width: 0.6rem;
-  background: #047857;
+  background: var(--slider-dark);
   -webkit-appearance: none;
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: 0px 0px 0px 0.15rem #ecfdf5, 0px 0px 0px 0.3rem #047857;
+  box-shadow: 0px 0px 0px 0.15rem var(--primary-bg),
+    0px 0px 0px 0.3rem var(--slider-dark);
 }
 input[type="radio"]:after {
   width: 0.95rem;
@@ -108,11 +116,12 @@ input[type="radio"]:after {
   top: -2px;
   left: -1px;
   position: relative;
-  background-color: #d1fae5;
+  background-color: var(--primary-bg);
   content: "";
   display: inline-block;
   visibility: visible;
-  box-shadow: 0px 0px 0px 0.15rem #d1fae5, 0px 0px 0px 0.25rem #047857;
+  box-shadow: 0px 0px 0px 0.15rem var(--primary-bg),
+    0px 0px 0px 0.25rem var(--slider-dark);
 }
 
 input[type="radio"]:checked:after {
@@ -122,12 +131,13 @@ input[type="radio"]:checked:after {
   top: -2px;
   left: -1px;
   position: relative;
-  background-color: #10b981;
+  background-color: var(--slider-dark);
   content: "";
   display: inline-block;
   visibility: visible;
 
-  box-shadow: 0px 0px 0px 0.15rem #d1fae5, 0px 0px 0px 0.25rem #047857;
+  box-shadow: 0px 0px 0px 0.15rem var(--primary-bg),
+    0px 0px 0px 0.25rem var(--slider-dark);
 }
 #purchase::before,
 #invested::before,

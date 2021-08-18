@@ -14,7 +14,7 @@ var initialLoad = true;
 
 var xValues = ["Invested", "Expected Returns"];
 var yValues = [1, 1];
-var barColors = ["#10B981", "#047857"];
+var barColors = ["#34D399", "#047857"];
 
 sliderPurchaseInput.oninput = function () {
   updateslider(sliderPurchaseInput, purchase);
@@ -36,12 +36,16 @@ window.onload = function () {
 
 for (var i = 0, max = investType.length; i < max; i++) {
   investType[i].onclick = function () {
-    updateslider();
     if (this.value === "sip") {
       investLabel.innerHTML = "Monthly Invesment";
+      barColors = ["#6ee7b7", "#047857"];
+      document.documentElement.className = "green-theme";
     } else {
       investLabel.innerHTML = "Onetime Invesment";
+      barColors = ["#fca5a5", "#b91c1c"];
+      document.documentElement.className = "red-theme";
     }
+    updateslider();
   };
 }
 function updateslider(slider, spanName) {
@@ -51,7 +55,7 @@ function updateslider(slider, spanName) {
         ? numberConvertToIndian(slider.value)
         : slider.value;
     var value = ((slider.value - slider.min) / (slider.max - slider.min)) * 100;
-    var color = `linear-gradient(to right, #047857 0%, #047857 ${value}%, #6EE7B7 ${value}%, #6EE7B7 100%)`;
+    var color = `linear-gradient(to right, var(--slider-dark) 0%, var(--slider-dark) ${value}%, var(--slider-light) ${value}%, var(--slider-light) 100%)`;
     slider.style.background = color;
   }
   var type = investType.elements[`invesmentType`].value;
@@ -101,6 +105,7 @@ function updateslider(slider, spanName) {
         {
           backgroundColor: barColors,
           data: yValues,
+          borderColor: ["black", "black"],
         },
       ],
     },
