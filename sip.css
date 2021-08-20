@@ -25,6 +25,8 @@
   background-color: var(--primary-bg);
   padding: 1rem;
   border-radius: 1rem;
+
+  box-shadow: 1px 1px 3px var(--slider-dark), -1px -1px 3px var(--slider-light);
 }
 .container {
   display: flex;
@@ -79,10 +81,13 @@ label {
   border-radius: 5px;
 
   margin-bottom: 1rem;
-  border: 1px solid var(--slider-dark);
+
   cursor: pointer;
   -webkit-transition: 0.2s;
   transition: opacity 0.2s;
+
+  box-shadow: inset 1px -1px 3px var(--slider-light),
+    inset -1px -1px 3px var(--slider-dark);
 }
 input[type="range"]:focus {
   outline: none;
